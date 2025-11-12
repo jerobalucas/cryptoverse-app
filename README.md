@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# Cryptoverse - Cryptocurrency Information Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, feature-rich React application for exploring cryptocurrency information, market data, and crypto news.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Homepage Dashboard**: Get an overview of top cryptocurrencies and market statistics
+- **Cryptocurrencies List**: Browse and search through comprehensive cryptocurrency data
+- **Crypto Details**: View detailed information about individual cryptocurrencies including price, market cap, and charts
+- **Exchanges**: Discover and explore cryptocurrency exchanges
+- **Crypto News**: Stay updated with the latest cryptocurrency news and market updates
+- **Real-time Data**: Powered by RapidAPI's Coinranking API for up-to-date crypto information
+- **Interactive Charts**: Visualize cryptocurrency price trends using Chart.js
+- **Responsive Design**: Beautiful UI built with Ant Design for seamless experience across devices
 
-### `npm start`
+## 📋 Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js (v14 or higher)
+- npm or yarn package manager
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Installation
 
-### `npm test`
+1. Clone the repository:
+```bash
+git clone https://github.com/jerobalucas/cryptoverse-app.git
+cd cryptoapp
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Create a `.env` file in the root directory and add your RapidAPI key:
+```
+REACT_APP_RAPIDAPI_KEY=your_api_key_here
+REACT_APP_RAPIDAPI_HOST=coinranking1.p.rapidapi.com
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the development server:
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application will open at [http://localhost:3000](http://localhost:3000)
 
-### `npm run eject`
+## 📦 Build
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create an optimized production build:
+```bash
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏗️ Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+src/
+├── components/           # React components
+│   ├── Homepage.jsx
+│   ├── Cryptocurrencies.jsx
+│   ├── CryptoDetails.jsx
+│   ├── Exchanges.jsx
+│   ├── News.jsx
+│   └── Navbar.jsx
+├── services/            # API services
+│   └── cryptoApi.js     # RTK Query API endpoints
+├── app/
+│   └── store.js         # Redux store configuration
+├── App.js               # Main app component
+├── App.css              # Application styles
+└── index.js             # React entry point
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Tech Stack
 
-## Learn More
+- **Frontend Framework**: React 19.2
+- **Routing**: React Router 7.9
+- **State Management**: Redux Toolkit 2.10 & RTK Query
+- **UI Framework**: Ant Design 5.28
+- **Visualization**: Chart.js 4.5 with react-chartjs-2
+- **HTTP Client**: Axios 1.13
+- **Utilities**: 
+  - Millify (for number formatting)
+  - Moment (for date/time handling)
+  - html-react-parser (for HTML parsing)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔌 API Integration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project uses the **Coinranking API** via RapidAPI for cryptocurrency data:
+- Real-time cryptocurrency prices and market data
+- Exchange information
+- Cryptocurrency news and updates
+- Historical price data
 
-### Code Splitting
+## 📝 Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `npm start`: Run the development server
+- `npm run build`: Build for production
+- `npm test`: Run tests
+- `npm run eject`: Eject from Create React App (irreversible)
 
-### Analyzing the Bundle Size
+## 🌐 Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `/` - Homepage with cryptocurrency overview
+- `/cryptocurrencies` - List of all cryptocurrencies
+- `/crypto/:coinId` - Detailed information about a specific cryptocurrency
+- `/exchanges` - Cryptocurrency exchanges directory
+- `/news` - Latest cryptocurrency news
 
-### Making a Progressive Web App
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is private and proprietary.
 
-### Advanced Configuration
+## 👤 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Jero Balucas
 
-### Deployment
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+For questions or suggestions, please reach out to the project owner.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Note**: Make sure to keep your API credentials secure and never commit them to version control. Use environment variables instead.
